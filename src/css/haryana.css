@@ -1,0 +1,166 @@
+/* Root variables for color theme */
+:root {
+    --primary-color: #CCD5AE; /* Main color */
+    --header-background: #CCD5AE;
+    --brief-background: #FEFAE0; /* Background color for the brief section */
+    --text-color: #333;
+    --dish-background: #CCD5AE; /* Main color for dish card background */
+    --dish-card-background: #ffffff; /* Inside dish card background */
+    --hover-color: #A8B89A; /* Slightly darker shade for hover effects */
+    --highlight-color: #FFE4B5; /* Light color for highlights */
+}
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: var(--header-background);
+    color: #333;
+    text-align: center;
+    padding: 40px 20px; /* Increased padding for a more spacious look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Added bottom margin for spacing */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold; /* Added bold weight for emphasis */
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 5px 0 10px 0; /* Adjusted margin for better spacing */
+}
+
+/* Highlighted text section */
+.highlight {
+    background-color: var(--highlight-color); /* Light background for highlights */
+    padding: 20px; /* Added padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+    color: #333; /* Text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Centered text */
+    margin: 20px auto;
+    max-width: 800px; /* Centered with max width */
+}
+
+/* Brief section styling */
+.brief-section {
+    background-color: #ffffff; /* Changed to a different matching color */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center; 
+    margin: 20px auto;
+    max-width: 800px; /* Centered with max width */
+}
+
+.brief-section p {
+    font-size: 1.1em; /* Slightly larger for better readability */
+    margin: 0;
+    color: #333; /* Ensure text color is dark for contrast */
+}
+
+/* Main content area */
+main {
+    background-color:#CCD5AE;
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column; /* Changed to column for brief and dishes */
+    align-items: center; /* Centered content */
+}
+
+/* Highlighted text section */
+.highlight-main {
+    background-color: var(--highlight-color); /* Light background for highlights */
+    padding: 20px; /* Added padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+    color: #333; /* Text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Centered text */
+    margin: 20px auto;
+    max-width: 800px; /* Centered with max width */
+}
+
+/* Dish container styling */
+.dish-container {
+   
+    display: flex;
+    flex-wrap: nowrap; /* No wrapping */
+    justify-content: center;
+    max-width: 1200px;
+    gap: 30px; /* Add space between cards */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+}
+
+/* Dish card styling */
+.dish {
+    background-color: var(--dish-card-background); /* Inside dish card background */
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    width: 260px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dish:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+ /* Image styling for uniformity */
+.dish img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Dish title */
+.dish h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+/* Dish description */
+.dish p {
+    font-size: 1em;
+    color: #666;
+    margin: 0;
+}
+
+/* Highlighted text section */
+.highlight-footer {
+    background-color: var(--highlight-color); /* Light background for highlights */
+    padding: 20px; /* Added padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+    color: #333; /* Text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Centered text */
+    margin: 20px auto;
+    max-width: 800px; /* Centered with max width */
+}
+
+/* Footer styling */
+footer {
+    background-color: var(--header-background);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EatLocal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navlogo">
+                <img src="img/logo.jpg" alt="EatLocal Logo" class="logo-icon">
+            </div>
+            <div class="navlocation">
+                <select class="select-location" id="location-dropdown">
+                    <option disabled selected>Select Location</option>
+                    <option value="current">Current Location</option>
+                    <option value="specific">Specific Location</option>
+                </select>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for dishes or restaurants">
+            </div>
+            <div class="nav-account">
+                <div class="nav-login" id="login-btn">
+                    <img src="img/image.png" alt="Account Icon" class="account-icon">
+                    <span>Log in</span>
+                </div>
+                <div class="nav-signup" id="signup-btn">
+                    <span>Sign Up</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-signup-modal">&times;</span>
+            <h2>Sign Up</h2>
+            <form>
+                <label for="signup-username">Username:</label>
+                <input type="text" id="signup-username" name="signup-username" required>
+
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="signup-password" required>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <div class="frontImage">
+        <div class="tagline">
+            <p>Your Gateway to Authentic Local Dishes.</p>
+        </div>
+    </div>
+    <div class="content-section">
+        <h1>Authentic Indian Dishes Delivered</h1>
+        <h2>Experience India’s Culinary Diversity</h2>
+        <p>EatLocal brings India’s regional delicacies to your doorstep. Simply choose your location, select a state and its famous dish, and discover the best restaurants serving that dish in your area. Order easily through Zomato or Swiggy and enjoy the true taste of India.</p>
+    </div>
+    <div class="state_Section">
+        <div class="state haryana">
+            <img id="haryana-image" src="img/haryana.png" alt="kadi pakoda" style="cursor: pointer;">
+
+            <div class="state-name">Haryana</div>
+        </div>
+        <div class="state bihar">
+            <img src="img/Bihar.png" alt="liti chokha">
+            <div class="state-name">Bihar</div>
+        </div>
+        <div class="state gujrat">
+            <img src="img/gujrat.png" alt="dohka">
+            <div class="state-name">Gujrat</div>
+        </div>
+        <div class="state maharashtra">
+            <img src="img/maharashtra.png" alt="vada pav">
+            <div class="state-name">Maharashtra</div>
+        </div>
+        <div class="state telangana">
+            <img src="img/telangana.png" alt="biryani">
+            <div class="state-name">Telangana</div>
+        </div>
+        <div class="state himachal">
+            <img src="img/himachal.png" alt="dham">
+            <div class="state-name">Himachal Pradesh</div>
+        </div>
+        <div class="state rajasthan">
+            <img src="img/rajasthan.png" alt="dal-bati churma ">
+            <div class="state-name">Rajasthan</div>
+        </div>
+        <div class="state sikkim">
+            <img src="img/sikkim.png" alt="momos">
+            <div class="state-name">Sikkim</div>
+        </div>
+        <div class="state odisha">
+            <img src="img/odisha.png" alt="dalma">
+            <div class="state-name">Odisha</div>
+        </div>
+        <div class="state karnataka">
+            <img src="img/Karnataka.png" alt="bisibele bath">
+            <div class="state-name">Karnataka</div>
+        </div>
+        <div class="state jammukashmir">
+            <img src="img/kashmir.png" alt="mutton rogan josh">
+            <div class="state-name">Jammu & Kashmir</div>
+        </div>
+        <div class="state mizoram">
+            <img src="img/mizoram.png" alt="bai">
+            <div class="state-name">Mizoram</div>
+        </div>
+        <div class="state goa">
+            <img src="img/goa.png" alt="fish cury">
+            <div class="state-name">Goa</div>
+        </div>
+        <div class="state westbengal">
+            <img src="img/westbengal.png" alt="Mutton gosh">
+            <div class="state-name">West Bengal</div>
+        </div>
+        <div class="state kerala">
+            <img src="img/kerala.png" alt="Puttu and kadala curry">
+            <div class="state-name">Kerala</div>
+        </div>
+        <div class="state tamilnadu">
+            <img src="img/tamilnadu.png" alt="Rasam">
+            <div class="state-name">Tamil Nadu</div>
+        </div>
+        <div class="state andhrapradesh">
+            <img src="img/andrapradesh.png" alt="punugulu">
+            <div class="state-name">Andhra Pradesh</div>
+        </div>
+        <div class="state arunachalpradesh">
+            <img src="img/arunachalpradesh.png" alt="pika pila">
+            <div class="state-name">Arunachal Pradesh</div>
+        </div>
+        <div class="state assam">
+            <img src="img/assam.png" alt="Masor tenga">
+            <div class="state-name">Assam</div>
+        </div>
+        <div class="state chattisgarh">
+            <img src="img/chattisgrah.png" alt="Bafauri">
+            <div class="state-name">Chattisgarh</div>
+        </div>
+        <div class="state jharkhand">
+            <img src="img/jharkhand.png" alt="Pitha">
+            <div class="state-name">Jharkhand</div>
+        </div>
+        <div class="state madhyapradesh">
+            <img src="img/madhyapradesh.png" alt="Poha">
+            <div class="state-name">Madhya Pradesh</div>
+        </div>
+        <div class="state manipur">
+            <img src="img/manipur.png" alt="chamthong">
+            <div class="state-name">Manipur</div>
+        </div>
+        <div class="state meghalaya">
+            <img src="img/meghalaya.png" alt="Jadoh">
+            <div class="state-name">Meghalaya</div>
+        </div>
+        <div class="state nagaland">
+            <img src="img/nagaland.png" alt="Galho">
+            <div class="state-name">Nagaland</div>
+        </div>
+        <div class="state tripura">
+            <img src="img/tripura.png" alt="Mui borok">
+            <div class="state-name">Tripura</div>
+        </div>
+        <div class="state uttarpradesh">
+            <img src="img/uttarpradesh.png" alt="Shami kebab">
+            <div class="state-name">Uttar Pradesh</div>
+        </div>
+        <div class="state uttarakhand">
+            <img src="img/uttarakhand.png" alt="Rabri">
+            <div class="state-name">Uttarakhand</div>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About EatLocal</h3>
+                <p>EatLocal is dedicated to bringing authentic Indian flavors to your doorstep. Explore the rich culinary heritage of India with just a few clicks, and enjoy the best dishes from every state.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="img/twitter-icon.png" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: support@eatlocal.com</p>
+                <p>Phone: +91 12345 67890</p>
+                <p>Address: 123 Culinary Street, Food City, India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 EatLocal. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    
+    
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
