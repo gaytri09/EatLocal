@@ -3,17 +3,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const locationBarContainer = document.getElementById('locationBar-container');
 
     // Handle location dropdown change
-    locationDropdown.addEventListener('change', function () {
-        const selectedValue = locationDropdown.value;
+    if (locationDropdown && locationBarContainer) {
+        locationDropdown.addEventListener('change', function () {
+            const selectedValue = locationDropdown.value;
 
-        if (selectedValue === 'current') {
-            locationBarContainer.innerHTML = 'You have selected your current location.';
-        } else if (selectedValue === 'specific') {
-            locationBarContainer.innerHTML = 'Please enter your specific location.';
-        } else {
-            locationBarContainer.innerHTML = ''; // Clear when no valid option is selected
-        }
-    });
+            if (selectedValue === 'current') {
+                locationBarContainer.innerHTML = 'You have selected your current location.';
+            } else if (selectedValue === 'specific') {
+                locationBarContainer.innerHTML = 'Please enter your specific location.';
+            } else {
+                locationBarContainer.innerHTML = ''; // Clear when no valid option is selected
+            }
+        });
+    }
 
     // Login Modal functionality
     const loginBtn = document.getElementById('login-btn');
@@ -56,16 +58,36 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    // Redirect to Haryana page on image click
+    const haryanaImage = document.getElementById('haryana-image');
+    if (haryanaImage) {
+        haryanaImage.addEventListener('click', function () {
+            window.location.href = 'haryana/html/haryana.html';
+        });
+    }
+    
+
+    // Search bar functionality
+    const searchBar = document.querySelector('.search-bar'); // Ensure your search bar has this class
+    if (searchBar) {
+        searchBar.addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') { // Check if Enter key is pressed
+                const searchTerm = searchBar.value.trim().toLowerCase(); // Get search term
+                let targetPage = '';
+
+                // Map state names to their respective pages
+                if (searchTerm === 'haryana') {
+                    targetPage = 'html/haryana.html';
+                }
+                // Add more states as needed
+                else {
+                    alert('State not found!'); // Alert if state is not found
+                    return; // Stop further execution
+                }
+
+                window.location.href = targetPage; // Redirect to the target page
+            }
+        });
+    }
 });
-
-// Assuming this code is in your main HTML file where the state pictures are displayed
-
-document.addEventListener('DOMContentLoaded', function () {
-    const haryanaImage = document.getElementById('haryana-image'); // Ensure your Haryana image has this ID
-
-    haryanaImage.addEventListener('click', function () {
-        window.location.href = 'html/haryana.html'; // Update the path to include the 'html' folder
-    });
-});
-
-

@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Famous Dishes of Haryana</title>
-    <link rel="stylesheet" href="../css/haryana.css"> <!-- Link to your new CSS file -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/haryana.css">
 </head>
 <body>
 
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="../../index.html"><img src="../../img/logo.jpg" alt="EatLocal Logo"></a>
+        </div>
+
+        <!-- Search bar in the navbar -->
+        <div class="navbar-search">
+            <input type="text" class="search-bar" placeholder="Search for dishes...">
+        </div>
+
+        <!-- Home page link -->
+        <div class="navbar-links">
+            <a href="../../index.html">Home</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
     <header>
-        <h1 id="Haryana-Specials">Famous Specialties of Haryana</h1>
+        <div class="header-content">
+            <h1 id="Haryana-Specials">Famous Specialties of Haryana</h1>
+        </div>
         <div class="brief-section">
             <p>Explore the delicious dishes that represent the rich culinary heritage of Haryana!</p>
             <p>Haryana, known for its agricultural abundance, boasts a vibrant culinary tradition that reflects its rural roots. 
@@ -18,35 +39,45 @@
         </div>
     </header>
 
+    <!-- Main Section for Dishes -->
     <main>
         <div class="dish-container">
             <div class="dish">
-                <img src="../img/bajra_roti.jpg" alt="Bajra Roti" class="dish-image"> <!-- Update path -->
+                <a href="bajra_roti.html">
+                    <img src="../img/bajra_roti.jpg" alt="Bajra Roti" class="dish-image">
+                </a>
                 <h2>Bajra Roti</h2>
                 <p>A traditional Indian bread made from millet flour, served with ghee and jaggery.</p>
             </div>
             <div class="dish">
-                <img src="../img/dal_makhani.jpg" alt="Dal Makhani" class="dish-image"> <!-- Update path -->
+                <a href="dal_makhani.html">
+                    <img src="../img/dal_makhani.jpg" alt="Dal Makhani" class="dish-image">
+                </a>
                 <h2>Dal Makhani</h2>
                 <p>A rich and creamy lentil dish cooked with spices, perfect with rice or roti.</p>
             </div>
             <div class="dish">
-                <img src="../img/khichdi.jpg" alt="Khichdi" class="dish-image"> <!-- Update path -->
+                <a href="khichdi.html">
+                    <img src="../img/khichdi.jpg" alt="Khichdi" class="dish-image">
+                </a>
                 <h2>Khichdi</h2>
                 <p>A comforting dish made with rice and lentils, often garnished with ghee and spices.</p>
             </div>
             <div class="dish">
-                <img src="../img/gajar_ka_halwa.jpg" alt="Gajar Ka Halwa" class="dish-image"> <!-- Update path -->
-                <h2>Gajar Ka Halwa</h2>
+                <a href="gajar_halwa.html">
+                    <img src="../img/gajar_halwa.jpg" alt="Gajar Halwa" class="dish-image">
+                </a>
+                <h2>Gajar Halwa</h2>
                 <p>A sweet dessert made from grated carrots, milk, and sugar, garnished with nuts.</p>
             </div>
         </div>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 EatLocal. All rights reserved.</p>
     </footer>
 
-    <script src="../js/app.js"></script> <!-- Update path to your JavaScript file -->
+    <script src="../../js/app.js"></script> 
 </body>
 </html>
